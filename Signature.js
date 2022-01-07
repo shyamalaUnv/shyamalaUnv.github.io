@@ -100,7 +100,8 @@ class SignatureComponent extends InputComponentForSignature {
         this.refs.value.style.display = 'none';
       }
       if(this.refs.clicktoSign){
-        this.refs.clicktoSign.style.display = 'none';
+//         this.refs.clicktoSign.style.display = 'none';
+        this.refs.clicktoSign.hidden = true;
       }
   }
     if (value && this.refs.signatureImage && (this.options.readOnly || this.disabled)) {
