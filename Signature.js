@@ -95,15 +95,16 @@ class SignatureComponent extends InputComponentForSignature {
 
   setValue(value, flags = {}) {
     const changed = super.setValue(value, flags);
-    if(localStorage.getItem('flatten') === 'true' || localStorage.getItem('renderMode') === 'html'){
+//     if(localStorage.getItem('flatten') === 'true' || localStorage.getItem('renderMode') === 'html'){
       if(this.refs.value){
-        this.refs.value.style.display = 'none';
+//         this.refs.value.style.display = 'none';
+         this.refs.value.hidden = true;
       }
       if(this.refs.clicktoSign){
 //         this.refs.clicktoSign.style.display = 'none';
         this.refs.clicktoSign.hidden = true;
       }
-  }
+//   }
     if (value && this.refs.signatureImage && (this.options.readOnly || this.disabled)) {
       this.refs.signatureImage.setAttribute('src', value);
       this.showCanvas(false);
