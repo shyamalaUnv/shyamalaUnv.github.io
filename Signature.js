@@ -98,11 +98,11 @@ class SignatureComponent extends InputComponentForSignature {
 //     if(localStorage.getItem('flatten') === 'true' || localStorage.getItem('renderMode') === 'html'){
       if(this.refs.value){
 //         this.refs.value.style.display = 'none';
-         this.refs.value.hidden = true;
+         this.refs.value.style.visibility = 'hidden';
       }
       if(this.refs.clicktoSign){
 //         this.refs.clicktoSign.style.display = 'none';
-        this.refs.clicktoSign.hidden = true;
+        this.refs.clicktoSign.style.visibility = 'hidden';
       }
 //   }
     if (value && this.refs.signatureImage && (this.options.readOnly || this.disabled)) {
