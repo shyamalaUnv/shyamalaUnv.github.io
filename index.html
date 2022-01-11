@@ -235,6 +235,14 @@
       let users = [{
         id: "shyamala@unvired.com",
         name: "Shyamala"
+      },
+      {
+        id: "srinidhi@unvired.com",
+        name: "Srinidhi Rao"
+      },
+      {
+        id: "raghav@unvired.com",
+        name: "Raghavendra"
       }];
       let vobArr = ['To Be Fixed', 'Clarification', 'Info'];
       let annotateJson = [];
@@ -280,7 +288,7 @@
       var r = Recogito.init({
         content: document.getElementById('formio'),
         widgets: [
-          { widget: 'COMMENT'},
+         { widget: recogito.CommentsMention, userSuggestions: users },
           { widget: 'TAG', vocabulary: vobArr }
         ]
       });
